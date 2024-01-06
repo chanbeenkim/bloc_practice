@@ -14,6 +14,12 @@ class _AlbumScreenState extends State<AlbumScreen> {
   final AlbumBloc _albumBloc = AlbumBloc();
 
   @override
+  void initState() {
+    _albumBloc.fetchAllAlbums();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
